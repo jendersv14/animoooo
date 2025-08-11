@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen con Botón</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111;
+        }
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 600px; /* ancho máximo en pantallas grandes */
+        }
+        .container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #ff4b4b;
+            color: white;
+            padding: 12px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #d63c3c;
+        }
+
+        /* Ajustes para pantallas pequeñas */
+        @media (max-width: 480px) {
+            .btn {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Reemplaza imagen.jpg por tu imagen -->
+        <img src="gaby3.jpg" alt="Imagen estática">
+        
+        <!-- Reemplaza el enlace por tu canción -->
+        <a href="https://music.youtube.com/watch?v=yPAljzk9yb0&si=ZXrsE0NTlLVQ_qOQ" class="btn" target="_blank">
+            ▶️
+        </a>
+    </div>
+</body>
+</html>
