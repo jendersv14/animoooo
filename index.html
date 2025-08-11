@@ -54,7 +54,7 @@
     .mini-player {
       position: absolute;
       left: 50%;
-      transform: translate(-50%, 20px); /* posición inicial un poco abajo */
+      transform: translate(-50%, 20px);
       top: calc(50% + 60px);
       width: min(90%, 340px);
       background: rgba(0,0,0,0.7);
@@ -68,7 +68,7 @@
     }
     .mini-player.show {
       opacity: 1;
-      transform: translate(-50%, 0); /* se eleva suavemente */
+      transform: translate(-50%, 0);
       pointer-events: auto;
     }
     .mini-player .close {
@@ -113,10 +113,10 @@
       <span id="playIcon">▶️</span><span id="playText">Reproducir</span>
     </a>
 
-    <!-- MINI REPRODUCTOR (AUDIO MP3) SIN NOMBRE + ANIMACIÓN -->
+    <!-- MINI REPRODUCTOR SIN DESCARGA -->
     <div class="mini-player" id="audioMiniPlayer" aria-label="Mini reproductor de audio">
       <button class="close" id="closePlayer" aria-label="Cerrar reproductor">✕</button>
-      <audio id="audioEl" preload="metadata" controls>
+      <audio id="audioEl" preload="metadata" controls controlsList="nodownload">
         <source src="song.mp3" type="audio/mpeg">
         Tu navegador no soporta audio HTML5.
       </audio>
